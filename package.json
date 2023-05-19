@@ -1,22 +1,24 @@
 {
-  "name": "electron-boilerplate",
-  "productName": "Electron Boilerplate",
+  "name": "parrotias-windows",
+  "productName": "Parrotias",
   "description": "Starter for your Electron application",
   "version": "0.0.0",
   "private": true,
-  "author": "Mr. Gumby <mr.gumby@example.com>",
-  "copyright": "© 2017, Gumby inc.",
-  "homepage": "http://example.com",
+  "author": "Taehyung Kwon",
+  "copyright": "© 2023, Taehyung Kwon",
+  "homepage": "http://parrotias.com",
   "main": "app/main.js",
   "build": {
-    "appId": "com.example.electron-boilerplate",
+    "appId": "com.parrotias",
+    "icon": "resources/icon.ico",
     "files": [
       "app/**/*",
       "node_modules/**/*",
       "package.json"
     ],
     "directories": {
-      "buildResources": "resources"
+      "buildResources": "resources",
+      "output": "dist"
     },
     "publish": null
   },
@@ -28,7 +30,7 @@
     "e2e": "mocha temp/e2e.js --require source-map-support/register",
     "test": "npm run unit && npm run e2e",
     "start": "node build/start.js",
-    "release": "npm test && webpack --config=build/webpack.app.config.js --env=production && electron-builder"
+    "release": "npm test && webpack --config=build/webpack.app.config.js --env=production && NODE_ENV=production electron-builder"
   },
   "dependencies": {
     "fs-jetpack": "^4.1.0"
@@ -40,7 +42,7 @@
     "chai": "^4.1.0",
     "css-loader": "^5.2.0",
     "electron": "^13.0.1",
-    "electron-builder": "^22.5.1",
+    "electron-builder": "^22.14.13",
     "electron-mocha": "^10.0.0",
     "mocha": "^8.3.2",
     "source-map-support": "^0.5.6",
@@ -50,5 +52,8 @@
     "webpack-cli": "^4.6.0",
     "webpack-merge": "^5.7.3",
     "webpack-node-externals": "^3.0.0"
+  },
+  "win": {
+    "target": "nsis"
   }
 }

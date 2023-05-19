@@ -1,24 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>Electron Boilerplate</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./styles/style.css" />
+    <title>Parrotias</title>
   </head>
   <body>
-    <div id="app" class="container" style="display: none;">
-      <h1 id="greet"></h1>
-      <p>
-        Welcome to
-        <a href="https://www.electronjs.org/" class="electron-website-link">
-          Electron
-        </a>
-        app running on this <strong id="os"></strong> machine.
-      </p>
-      <p>App author: <strong id="author"></strong></p>
-      <p>Environment: <strong id="env"></strong></p>
-      <p>Electron version: <strong id="electron-version"></strong></p>
+    <div id="loading-bar">
+      <div id="progress"></div>
     </div>
-
-    <script src="app.js"></script>
+    <iframe id="website-iframe" src="https://parrotias.com"></iframe>
+    <script type="text/javascript" src="./scripts/progress-bar.js"></script>
   </body>
 </html>
